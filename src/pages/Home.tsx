@@ -14,12 +14,12 @@ import { database } from "../services/firebase";
 
 export function Home() {
   const history = useHistory();
-  const { SignInWithGoogle, user } = useAuth();
+  const { signInWithGoogle, user } = useAuth();
   const [roomCode, setRoomCode] = useState("");
 
   async function handleCreateRoom() {
     if (!user) {
-      await SignInWithGoogle();
+      await signInWithGoogle();
     }
     history.push("/rooms/new");
   }
@@ -27,7 +27,7 @@ export function Home() {
   async function handleJoinRoom(event: FormEvent) {
     event.preventDefault();
 
-    if(roomCode.trim() == '') {
+    if(roomCode.trim() === '') {
       return;
     } 
 
@@ -35,6 +35,11 @@ export function Home() {
 
     if(!roomRef.exists()) {
       alert('Room does not exists')
+      return;
+    }
+
+    if(roomRef.val().endedAt) {
+      alert('Room already closed.')
       return;
     }
 
