@@ -54,12 +54,11 @@
 
         text-align: center;
 
-        >img {
+        >svg {
             align-self: center;
         }
 
         h2 {
-            font-size: 24px;
             margin: 64px 0 24px;
             font-family: 'Poppins', sans-serif;
         }
@@ -172,16 +171,9 @@
                 display: none;
             }
         }
-    }
-}
 
-@media (max-width: 400px) {
-    #page-auth {
-        aside {
-
-            strong {
-                font: 700 30px 'Poppins', sans-serif;
-            }
+        .create-room {
+            margin-top: 25px;
         }
     }
 }

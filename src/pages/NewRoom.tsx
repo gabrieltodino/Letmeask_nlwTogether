@@ -1,7 +1,7 @@
 import { FormEvent, useState } from "react";
 
 import illustrationImg from "../assets/images/illustration.svg";
-import logoImg from "../assets/images/logo.svg";
+import { LogoSvg } from "../components/LogoSvg";
 
 import { Link, useHistory } from "react-router-dom";
 
@@ -47,7 +47,7 @@ export function NewRoom() {
       </aside>
       <main>
         <div className="main-container">
-          <img src={logoImg} alt="Let me ask" />
+          <LogoSvg />
           <h2>Criar uma nova sala</h2>
           <form onSubmit={handleCreateRoom}>
             <input

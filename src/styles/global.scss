@@ -5,8 +5,28 @@
 }
 
 body {
-    background-color: #f8f8f8;
-    color: #29292e;
+  --background-color: #f8f8f8;
+  --font-color: #29292e;
+
+  --question-bg: #fefefe;
+  --question-bg-high: #F4F0FF;
+  --question-bg-answered: #DBDCDD;
+  --questions-icons: #737380;
+}
+
+body.darkMode {
+  --background-color: #464647;
+  --font-color: #f8f8f8;
+
+  --question-bg: #808080;
+  --question-bg-high: #a0a0a0;
+  --question-bg-answered: #666666;
+  --questions-icons: #333;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--font-color);
 }
 
 @media (max-width: 1080px) {
@@ -38,4 +58,10 @@ h2 {
 
 button {
   cursor: pointer;
+}
+
+.logo-svg {
+  & path.letter {
+   fill: var(--font-color);
+  }
 }

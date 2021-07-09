@@ -5,11 +5,14 @@ import { NewRoom } from "./pages/NewRoom";
 import { Room } from "./pages/Room";
 import { AdminRoom } from "./pages/AdminRoom";
 
+import { SwitchDarkMode } from "./components/SwitchDarkMode"
+
 import './styles/global.scss'
 
 import { AuthContextProvider } from './contexts/AuthContext'
 
 function App() {
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -21,6 +24,7 @@ function App() {
 
             <Route path="/admin/rooms/:id" component={AdminRoom} /> 
           </Switch>
+          <SwitchDarkMode />
         </AuthContextProvider>
       </BrowserRouter>
     </div>
