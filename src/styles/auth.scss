@@ -4,7 +4,7 @@
     height: 100vh;
 
     aside {
-        flex: 7;
+        flex: 5;
 
         background-color: #835afd;
         color: #fff;
@@ -25,13 +25,15 @@
             margin-top: 14px;
         }
 
-         p {
-             font-size: 24px;
-             line-height: 32px;
-             margin-top: 14px;
-             color: #f8f8f8;
-         }
+        p {
+            font-size: 24px;
+            line-height: 32px;
+            margin-top: 14px;
+            color: #f8f8f8;
+        }
     }
+
+
 
     main {
         flex: 8;
@@ -52,7 +54,7 @@
 
         text-align: center;
 
-        > img {
+        >img {
             align-self: center;
         }
 
@@ -75,12 +77,13 @@
                 margin-top: 16px;
             }
 
-            button, input {
+            button,
+            input {
                 width: 100%;
             }
         }
 
-        p{
+        p {
             margin-top: 16px;
             font-size: 14px;
             color: #737380;
@@ -133,12 +136,52 @@
             margin-right: 16px;
         }
 
-        &::after{
+        &::after {
             content: '';
             flex: 1;
             height: 1px;
             background: #a8a8b3;
             margin-left: 16px;
+        }
+    }
+}
+
+@media (max-width: 870px) {
+    #page-auth {
+        aside {
+            flex: 1;
+
+            padding: 90px 50px;
+        }
+
+        main {
+            flex: 1;
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    #page-auth {
+        flex-direction: column;
+
+        aside {
+            padding: 0px 30px;
+            max-height: 35vh;
+
+            img {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    #page-auth {
+        aside {
+
+            strong {
+                font: 700 30px 'Poppins', sans-serif;
+            }
         }
     }
 }

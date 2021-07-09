@@ -10,17 +10,16 @@
       justify-content: space-between;
       align-items: center;
 
-      > img {
+      >img {
         max-height: 45px;
       }
 
-      > div {
+      >div {
         display: flex;
         gap: 16px;
 
         button {
           height: 40px;
-
         }
       }
     }
@@ -37,18 +36,17 @@
 
       h1 {
         font-family: 'Poppins', sans-serif;
-        font-size: 24px;
         color: #29292e;
       }
 
       span {
+        text-align: center;
         margin-left: 16px;
         background: #e559f9;
         border-radius: 9999px;
         padding: 8px 16px;
         color: #FFF;
         font-weight: 500;
-        font-size: 14px;
       }
     }
 
@@ -84,12 +82,10 @@
             margin-left: 8px;
             color: #29292e;
             font-weight: 500;
-            font-size: 14px;
           }
         }
 
-        > span {
-          font-size: 14px;
+        >span {
           color: #737380;
           font-weight: 500;
 
@@ -98,7 +94,6 @@
             border: 0;
             color: #835AFD;
             text-decoration: underline;
-            font-size: 14px;
             font-weight: 500;
             cursor: pointer;
           }
@@ -108,6 +103,37 @@
 
     .question-list {
       margin-top: 32px;
+    }
+  }
+}
+
+@media (max-width: 870px) {
+  main {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 720px) {
+  header {
+    .content {
+      flex-direction: column;
+      gap: 10px;
+
+      > div {
+        flex-direction: column;
+      }
+    }
+  }
+
+  main {
+    .room-title {
+      h1 {
+        width: 55%;
+      }
+
+      span {
+       width: 45%;
+      }
     }
   }
 }
