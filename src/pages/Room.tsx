@@ -11,6 +11,7 @@ import { useRoom } from "../hooks/useRoom";
 import { database } from "../services/firebase";
 
 import "../styles/room.scss";
+import { SwitchDarkMode } from "../components/SwitchDarkMode";
 
 type RoomParams = {
   id: string;
@@ -138,6 +139,9 @@ export function Room() {
           })}
         </div>
       </main>
+      <div className="switchWrapper">
+          <SwitchDarkMode />
+        </div>
     </div>
   );
 }

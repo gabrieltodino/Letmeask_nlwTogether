@@ -10,6 +10,7 @@ import { Button } from "../components/Button";
 import { useAuth } from "../hooks/useAuth";
 
 import { database } from "../services/firebase";
+import { SwitchDarkMode } from "../components/SwitchDarkMode";
 
 export function NewRoom() {
   const { user } = useAuth()
@@ -61,6 +62,9 @@ export function NewRoom() {
           <p>
             Quer entrar em uma sala existente <Link to="/">clique aqui</Link>
           </p>
+        </div>
+        <div className="switchWrapper">
+          <SwitchDarkMode />
         </div>
       </main>
     </div>
